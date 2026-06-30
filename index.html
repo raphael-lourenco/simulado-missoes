@@ -3,36 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabarito - Fundamentos Bíblicos da Missão (AV2)</title>
+    <title>Gabarito de Estudo - Fundamentos da Missão (AV2)</title>
     <style>
         :root {
-            --bg-color: #fafafa;
+            --bg-color: #f1f5f9;
             --container-bg: #ffffff;
             --primary-color: #1e3a8a;
-            --primary-hover: #172554;
-            --secondary-color: #0f766e;
-            --text-color: #1f2937;
-            --text-light: #4b5563;
-            --border-color: #e5e7eb;
-            --accent-bg: #f3f4f6;
-            --success-color: #16a34a;
-            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #111827;
-                --container-bg: #1f2937;
-                --primary-color: #3b82f6;
-                --primary-hover: #60a5fa;
-                --secondary-color: #14b8a6;
-                --text-color: #f9fafb;
-                --text-light: #d1d5db;
-                --border-color: #374151;
-                --accent-bg: #111827;
-                --success-color: #22c55e;
-                --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-            }
+            --primary-hover: #1e40af;
+            --secondary-color: #475569;
+            --text-color: #0f172a;
+            --text-light: #475569;
+            --border-color: #cbd5e1;
+            --accent-bg: #e2e8f0;
+            --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         }
 
         * {
@@ -42,71 +25,68 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.7;
             padding-bottom: 60px;
         }
 
         header {
-            background: linear-gradient(135deg, #1e3a8a, #0f766e);
-            color: white;
+            background-color: #ffffff;
+            color: var(--primary-color);
             padding: 40px 20px;
             text-align: center;
-            border-bottom: 4px solid var(--secondary-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
         header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            font-weight: 800;
-            letter-spacing: -0.025em;
+            font-size: 2rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 650px;
             margin: 0 auto;
         }
 
         .container {
-            max-width: 900px;
-            margin: 30px auto;
+            max-width: 850px;
+            margin: 25px auto;
             padding: 0 20px;
         }
 
         .controls {
             display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 12px;
+            margin-bottom: 25px;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             background-color: var(--container-bg);
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: var(--card-shadow);
+            padding: 12px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
         }
 
         .search-box {
             flex: 1;
-            min-width: 250px;
-            position: relative;
+            min-width: 240px;
         }
 
         .search-box input {
             width: 100%;
-            padding: 10px 15px;
-            border-radius: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
             border: 1px solid var(--border-color);
-            background-color: var(--bg-color);
+            background-color: #ffffff;
             color: var(--text-color);
-            font-size: 1rem;
+            font-size: 0.95rem;
             outline: none;
-            transition: border-color 0.2s;
         }
 
         .search-box input:focus {
@@ -115,19 +95,19 @@
 
         .btn-group {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         button {
-            padding: 10px 18px;
-            border-radius: 8px;
-            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--primary-color);
             font-weight: 600;
             cursor: pointer;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            transition: all 0.15s ease;
             background-color: var(--primary-color);
-            color: white;
+            color: #ffffff;
         }
 
         button:hover {
@@ -135,185 +115,144 @@
         }
 
         button.btn-secondary {
-            background-color: var(--accent-bg);
+            background-color: #ffffff;
             color: var(--text-color);
             border: 1px solid var(--border-color);
         }
 
         button.btn-secondary:hover {
-            background-color: var(--border-color);
+            background-color: var(--accent-bg);
         }
 
         .nav-tabs {
             display: flex;
-            gap: 10px;
-            margin-bottom: 25px;
+            gap: 8px;
+            margin-bottom: 20px;
             overflow-x: auto;
-            padding-bottom: 5px;
+            padding-bottom: 4px;
         }
 
         .tab {
-            padding: 8px 16px;
+            padding: 6px 14px;
             background-color: var(--container-bg);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
+            border-radius: 6px;
             cursor: pointer;
             white-space: nowrap;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
             color: var(--text-light);
-            transition: all 0.2s;
         }
 
         .tab.active {
-            background-color: var(--secondary-color);
-            color: white;
-            border-color: var(--secondary-color);
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
         }
 
         .section-title {
-            font-size: 1.5rem;
-            margin: 40px 0 20px 0;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--border-color);
+            font-size: 1.35rem;
+            margin: 35px 0 15px 0;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-color);
             color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-title span {
-            font-size: 0.9rem;
-            background-color: var(--accent-bg);
-            color: var(--text-light);
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-weight: normal;
+            font-weight: 700;
         }
 
         .question-card {
             background-color: var(--container-bg);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: var(--card-shadow);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
             border: 1px solid var(--border-color);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .question-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.12);
+            box-shadow: var(--card-shadow);
         }
 
         .question-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 12px;
+            gap: 12px;
+            margin-bottom: 10px;
         }
 
         .question-num {
             background-color: var(--accent-bg);
             color: var(--primary-color);
             font-weight: 700;
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
+            border-radius: 4px;
             flex-shrink: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .question-text {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: var(--text-color);
             flex: 1;
-            padding-top: 3px;
+            padding-top: 2px;
         }
 
         .toggle-answer-btn {
             background: none;
-            border: none;
-            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
             cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 5px 10px;
-            border-radius: 6px;
-            background-color: var(--accent-bg);
-            white-space: nowrap;
+            font-weight: 500;
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: #ffffff;
         }
 
         .toggle-answer-btn:hover {
-            background-color: var(--border-color);
+            background-color: var(--accent-bg);
         }
 
         .answer-box {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed var(--border-color);
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--accent-bg);
             color: var(--text-color);
-            display: block;
+            font-size: 1rem;
         }
 
         .answer-box.hidden {
             display: none;
         }
 
-        .answer-box strong {
-            color: var(--success-color);
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .answer-box ul, .answer-box ol {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-
-        .answer-box li {
-            margin-bottom: 6px;
-        }
-
         .reference-tag {
-            display: inline-block;
-            margin-top: 12px;
+            display: block;
+            margin-top: 10px;
             font-size: 0.8rem;
             color: var(--text-light);
-            background-color: var(--accent-bg);
-            padding: 2px 8px;
-            border-radius: 4px;
             font-style: italic;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 25px;
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border-top: 1px solid var(--border-color);
-            margin-top: 60px;
+            margin-top: 50px;
+            background-color: #ffffff;
         }
 
         @media print {
             body {
-                background-color: white;
-                color: black;
+                background-color: #ffffff;
+                color: #000000;
                 padding-bottom: 0;
             }
-            header {
-                background: none;
-                color: black;
-                border-bottom: 2px solid black;
-                padding: 20px 0;
+            header, footer {
+                border-bottom: 1px solid #000000;
+                padding: 15px 0;
             }
             .controls, .nav-tabs, .toggle-answer-btn {
                 display: none !important;
@@ -323,7 +262,7 @@
                 border: none;
                 border-bottom: 1px solid #ccc;
                 border-radius: 0;
-                padding: 15px 0;
+                padding: 12px 0;
                 page-break-inside: avoid;
             }
             .answer-box {
@@ -337,7 +276,7 @@
 
     <header>
         <h1>Gabarito de Estudo: Fundamentos da Missão</h1>
-        <p>Material de apoio completo para a prova AV2 baseado exclusivamente nos slides das aulas e notas de classe.</p>
+        <p>Material de apoio para a prova AV2 estruturado a partir dos slides das aulas e notas de classe.</p>
     </header>
 
     <div class="container">
@@ -358,19 +297,19 @@
             <div class="tab" onclick="filterTab('aula8', this)">Aula 8: NT & Evangelhos</div>
         </div>
 
+        <!-- SEÇÃO: AULA 6 -->
         <div class="section-block" data-subject="aula6">
-            <h2 class="section-title">Missões no Princípio da Bíblia <span>Aula 6</span></h2>
+            <h2 class="section-title">Missões no Princípio da Bíblia (Aula 6)</h2>
             
             <div class="question-card">
                 <div class="question-header">
                     <div class="question-num">1</div>
-                    <div class="question-text">Onde o plano redentivo de Deus é revealed a primeira vez na Bíblia? Descreva-o brevemente.</div>
+                    <div class="question-text">Onde o plano redentivo de Deus é revelado a primeira vez na Bíblia? Descreva-o brevemente.</div>
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial:</strong>
-                    Em <strong>Gênesis 3.15</strong> (no Jardim do Éden). O movimento missionário se iniciou logo após a queda do homem. Antes de castigar o homem, Deus passou a sentença de morte ao tentador, iluminando aquela hora sombria com a promessa de um Redentor: <em>"Este lhe ferirá a cabeça"</em>. Deus condenou a serpente (Satanás) e abriu ao homem a porta da salvação pela fé, apontando diretamente para a futura obra redentora de Cristo Jesus.
-                    <div class="reference-tag">Fonte: Slides (Aula 4/6, p. 7) & Anotações Manuais (p. 1)</div>
+                    O plano redentivo é revelado em Gênesis 3.15, no Jardim do Éden. O movimento missionário iniciou-se logo após a queda do homem, momento em que Deus, antes de aplicar o castigo, proferiu a sentença de morte ao tentador. Essa hora sombria foi iluminada pela promessa de um Redentor ao declarar que o descendente da mulher feriria a cabeça da serpente. Dessa forma, Deus condenou Satanás e abriu a porta da salvação pela fé, apontando diretamente para a futura obra redentora de Cristo Jesus.
+                    <span class="reference-tag">Fonte: Aula 6, p. 7 • Anotações Manuais, p. 1</span>
                 </div>
             </div>
 
@@ -381,9 +320,8 @@
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial:</strong>
-                    O mandamento e promessa central <strong>"Seja uma bênção"</strong>. Deus separou Abraão de todos os outros homens e o fez fundador de uma nova nação não para o proveito exclusivo da mesma, mas para que ela fosse o canal de transmissão do propósito salvífico universal de Deus para todas as demais famílias e nações da terra.
-                    <div class="reference-tag">Fonte: Slides (Aula 4/6, p. 8) & Anotações Manuais (p. 2)</div>
+                    O elemento missionário central manifesta-se no mandamento "Seja uma bênção". Deus separou Abraão de todos os outros homens e o estabeleceu como fundador de uma nova nação com o propósito específico de que ela servisse como um canal ou veículo para estender a bênção e o plano salvífico universal de Deus a todos os demais povos da terra, indicando que a eleição não visava o proveito exclusivo dos judeus.
+                    <span class="reference-tag">Fonte: Aula 6, p. 8 • Anotações Manuais, p. 2</span>
                 </div>
             </div>
 
@@ -394,15 +332,15 @@
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial:</strong>
-                    No fato de Deus designar Israel para ser uma <strong>"nação de sacerdotes"</strong>. Ele os escolheu dentre as nações com o fim específico de atuar como intermediários, portadores e mordomos do Plano redentor global, levando e reconciliando todas as outras nações com Jeová.
-                    <div class="reference-tag">Fonte: Slides (Aula 4/6, p. 10) & Anotações Manuais (p. 3)</div>
+                    O coração missionário de Deus revela-se na definição de que a nação eleita deveria funcionar como uma "nação de sacerdotes". Esse aspecto demonstra que Israel foi escolhido e separado dentre os outros povos não por favoritismo isolado, mas com a missão explícita de atuar como mordomo, intermediário e veículo da ação redentora divina, tendo a responsabilidade de guiar e atrair todas as nações da terra de volta a Jeová.
+                    <span class="reference-tag">Fonte: Aula 6, p. 10 • Anotações Manuais, p. 3</span>
                 </div>
             </div>
         </div>
 
+        <!-- SEÇÃO: AULA 7 -->
         <div class="section-block" data-subject="aula7">
-            <h2 class="section-title">Missões nos Salmos e nos Profetas <span>Aula 7</span></h2>
+            <h2 class="section-title">Missões nos Salmos e nos Profetas (Aula 7)</h2>
             
             <div class="question-card">
                 <div class="question-header">
@@ -411,9 +349,8 @@
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial:</strong>
-                    O Antigo Testamento estruturava-se a partir de um modelo de <strong>missão centrípeta</strong> (de fora para dentro). Sob esse sistema, o derramamento visível de graças e bênçãos de Deus sobre Israel (fortalecido pela obediência do povo) serviria como um testemunho magnético e atraente para o resto do mundo. Ao presenciarem isso, as nações estrangeiras e todos os confins da terra conheceriam o caminho do Senhor e seriam atraídos a temê-lo, exultar e adorar a Deus.
-                    <div class="reference-tag">Fonte: Slides (Aula 7, p. 5) & Anotações Manuais (p. 4)</div>
+                    O sistema missionário operava sob um modelo de missão centrípeta, ou seja, de fora para dentro. Através desse formato, caso o povo andasse em obediência, Deus derramaria visivelmente Suas bênçãos e graças sobre Israel, fazendo resplandecer Seu rosto sobre eles. O impacto testemunhal dessa manifestação funcionaria como um polo de atração para que as nações estrangeiras e todos os confins da terra reconhecessem os caminhos do Senhor, conhecessem a Sua salvação e fossem magneticamente impulsionados a temer, exultar e adorar a Deus.
+                    <span class="reference-tag">Fonte: Aula 7, p. 5 • Anotações Manuais, p. 4</span>
                 </div>
             </div>
 
@@ -424,21 +361,15 @@
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial:</strong>
-                    O caráter missionário de Daniel manifesta-se através da sua vivência na <strong>missão no exílio</strong>, onde atos de extrema fidelidade a Deus e intervenções milagrosas levaram governantes de grandes impérios mundiais e pagãos a reconhecerem e decretarem a soberania do Deus de Israel:
-                    <ul>
-                        <li><strong>Daniel 2.47:</strong> O rei Nabucodonosor se prostra e confessa que o Deus de Daniel é o <em>"Deus dos deuses e o Senhor dos reis"</em> após a interpretação do sonho da grande estátua.</li>
-                        <li><strong>Daniel 3.28:</strong> Nabucodonosor bendiz a Deus publicamente depois do livramento sobrenatural de Sadraque, Mesaque e Abede-Nego da fornalha ardente, decretando que não há outro deus que possa livrar assim.</li>
-                        <li><strong>Daniel 4.34-37:</strong> O mesmo rei, após perder a sanidade para aprender sobre a soberania divina, recupera o entendimento e exalta o <em>"Rei do céu"</em>.</li>
-                        <li><strong>Daniel 6.25-27:</strong> O rei persa Dario edita um decreto oficial para que todos os povos de seu domínio temam e reverenciem o Deus de Daniel, qualificando-O como o <em>"Deus vivo"</em> e <em>"eterno"</em> após o livramento na cova dos leões.</li>
-                    </ul>
-                    <div class="reference-tag">Fonte: Slides (Aula 7, p. 13-14) & Anotações Manuais (p. 5)</div>
+                    O caráter missionário de Daniel desenvolve-se por meio da missão no exílio, evidenciando que a fidelidade intransigente dos servos de Deus em ambiente estrangeiro e as subsequentes intervenções miraculosas moveram imperadores de grandes potências pagãs a confessarem publicamente a soberania divina. Esse movimento testemunhal consolida-se em Daniel 2.47, quando o rei Nabucodonosor se prostra e confessa que o Deus de Israel é o Deus dos deuses após a revelação do sonho da estátua; em Daniel 3.28, onde o monarca bendiz o Senhor publicamente e reconhece Seu livramento único após a preservação de Sadraque, Mesaque e Abede-Nego na fornalha ardente; em Daniel 4.34-37, quando o soberano recupera sua sanidade e passa a glorificar ativamente o Rei do céu; e em Daniel 6.25-27, momento em que o rei persa Dario emite um decreto oficial direcionado a todas as nações e línguas ordenando que todos temam e reverenciem o Deus de Daniel, qualificando-O como o Deus vivo e eterno após o milagre na cova dos leões.
+                    <span class="reference-tag">Fonte: Aula 7, p. 13-14 • Anotações Manuais, p. 5</span>
                 </div>
             </div>
         </div>
 
+        <!-- SEÇÃO: AULA 8 -->
         <div class="section-block" data-subject="aula8">
-            <h2 class="section-title">Missões no Novo Testamento – Evangelhos <span>Aula 8</span></h2>
+            <h2 class="section-title">Missões no Novo Testamento – Evangelhos (Aula 8)</h2>
             
             <div class="question-card">
                 <div class="question-header">
@@ -447,9 +378,8 @@
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial:</strong>
-                    Porque a sua própria razão de existir foi apresentar a vida, as obras de Jesus e as ações subsequentes dos discípulos no cumprimento da ordem de pregar o evangelho até os confins da terra. À medida que a propagação avançava, a literatura tornou-se uma necessidade para que a mensagem alcançasse e fosse assimilada pelas nações pagãs. Logo, a temática missionária é fundamental e estruturante nas páginas do Novo Testamento; <strong>se ela for removida, a significação do livro é destruída e o seu coração é arrancado</strong>.
-                    <div class="reference-tag">Fonte: Slides (Aula 8, p. 3)</div>
+                    O Novo Testamento qualifica-se como um texto essencialmente missionário porque foi escrito com a finalidade central de apresentar a vida, as obras de Jesus Cristo e o engajamento prático de Seus discípulos em obediência ao mandamento de pregar o evangelho até os confins da terra. No desenvolvimento histórico dessa tarefa, a igreja sentiu a necessidade imediata de produzir literatura para que a mensagem salvífica cruzasse fronteiras geográficas e fosse devidamente compreendida pelas nações pagãs. Bratcher defende que a atividade missionária no Novo Testamento é fundamental e estruturante, não meramente incidental; se a mensagem de missões for suprimida, o significado real da obra é destruído e o seu coração é arrancado.
+                    <span class="reference-tag">Fonte: Aula 8, p. 3</span>
                 </div>
             </div>
 
@@ -460,15 +390,8 @@
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial:</strong>
-                    Os Evangelhos demonstram que o conceito do Reino de Deus apresentado por Jesus era totalmente inclusivo, derrubando os muros de preconceito da época. Entre os três exemplos de distinções superadas estão:
-                    <ul>
-                        <li><strong>Distinções de Sexo:</strong> Evidenciada na sua interação protetiva e teológica com as mulheres, quebrando barreiras culturais (Ex: Diálogo com a samaritana em <strong>João 4.27</strong>).</li>
-                        <li><strong>Distinções Sociais / Estigma Social:</strong> Visível na Sua proximidade e comunhão com marginalizados e cobradores de impostos (Ex: Visita à casa de Zaqueu em <strong>Lucas 19.5</strong> e o tratamento à pecadora em <strong>Lucas 7.39</strong>).</li>
-                        <li><strong>Distinções Raciais / Nacionais:</strong> Demonstrada no acolhimento e exaltação da fé de indivíduos de fora de Israel, a exemplo da mulher siro-fenícia/cananeia (<strong>Marcos 7.26</strong>) e do centurião romano (<strong>Mateus 8.10</strong>).</li>
-                    </ul>
-                    <em>(Nota dos slides: Jesus também superou distinções políticas, econômicas, de idade, de posição, de intimidade e de opinião pública).</em>
-                    <div class="reference-tag">Fonte: Slides (Aula 8, p. 4)</div>
+                    Os Evangelhos documentam que a concepção do Reino de Deus manifestada por Jesus possui natureza inclusiva, operando de modo a pulverizar os preconceitos e divisões da sociedade. Como exemplo prático dessas distinções superadas pela ação universal de Cristo, pode-se apontar a quebra das barreiras de sexo, visível em João 4.27 na sua aproximação e diálogo teológico público com as mulheres; a superação de distinções sociais e estigmas da época, perceptível quando Jesus interage intimamente e entra na casa de indivíduos marginalizados como Zaqueu em Lucas 19.5 e acolhe a pecadora em Lucas 7.39; e a dissolução de divisões raciais e nacionais, atestada no momento em que Ele atende, cura e exalta publicamente a fé de estrangeiros não judeus, a exemplo da mulher cananeia/siro-fenícia em Marcos 7.26 e do centurião romano em Mateus 8.10.
+                    <span class="reference-tag">Fonte: Aula 8, p. 4</span>
                 </div>
             </div>
 
@@ -479,22 +402,15 @@
                     <button class="toggle-answer-btn" onclick="toggleAnswer(this)">Ocultar</button>
                 </div>
                 <div class="answer-box">
-                    <strong>Resposta Oficial (Baseada no Evangelho de João):</strong>
-                    O texto joanino explicita a abrangência e o envio missionário por meio de passagens determinantes:
-                    <ol>
-                        <li><strong>João 3.16:</strong> Centraliza a missão no amor de Deus direcionado universalmente ao mundo: <em>"Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna."</em></li>
-                        <li><strong>João 20.21:</strong> Define o comissionamento dos discípulos como extensão direta da agência do Messias: <em>"Assim como o Pai me enviou, eu também envio vocês."</em></li>
-                        <li><strong>João 20.31:</strong> Revela o escopo intencionalmente evangelístico e literário de toda a confecção do livro: <em>"Estes, porém, foram registrados para que vocês creiam que Jesus é o Cristo, o Filho de Deus, e para que, crendo, tenham vida em seu nome."</em></li>
-                    </ol>
-                    <em>(Caso prefira usar Mateus, os slides indicam Mt 1.1, Mt 24.14 e a Grande Comissão em Mt 28.18-20).</em>
-                    <div class="reference-tag">Fonte: Slides (Aula 8, p. 6, 13, 14)</div>
+                    Tomando o Evangelho de João como referencial, seu forte propósito missionário universal é nitidamente exposto em três passagens estruturantes: em João 3.16, que situa o cerne do plano da redenção no amor abrangente de Deus direcionado à totalidade do mundo, garantindo vida eterna a todo aquele que nele crer; em João 20.21, passagem na qual Cristo comissiona formalmente a igreja e estabelece a continuidade de Sua obra terrena ao declarar de forma imperativa que, da mesma maneira que o Pai O enviou ao mundo, Ele também envia os Seus discípulos; e em João 20.31, versículo que desvela a intenção explicitamente evangelística e missionária de toda a composição literária do livro, detalhando que os sinais e milagres foram registrados especificamente para que os homens creiam que Jesus é o Cristo, o Filho de Deus, e alcancem a salvação em Seu nome.
+                    <span class="reference-tag">Fonte: Aula 8, p. 6, 13, 14</span>
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Preparado com carinho para o estudo dos irmãos • Fundamentos Bíblicos da Missão • STBSB / FBRJ</p>
+        <p>Material de Estudo • Fundamentos Bíblicos da Missão • STBSB / FBRJ</p>
     </footer>
 
     <script>
